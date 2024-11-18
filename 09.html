@@ -8,12 +8,21 @@
     Se o total de horas trabalhadas ultrapassar 60 horas, haverá adicional de 30%.
     Apresente o salário final recebido pelo funcionário semanalmente e o preço de cada hora trabalhada.
     */
-   //ENTRADA
 
+    //ENTRADA
+    const semana = Number(prompt(`Quantas horas você trabalha por semana?`));
+    const recebe = Number(prompt(`Quanto você recebe por hora trabalhada?`));
 
     //PROCESSAMENTO
+    let msgFinal = ""; 
 
-    
+    // Usando o operador ternário corretamente
+    msgFinal = (semana <= 45) ? 
+        "Você vai receber R$" + (semana * recebe).toFixed(2) + " sem adicional" :
+        (semana <= 60) ? 
+        "Você vai receber R$" + (semana * recebe * 1.20).toFixed(2) + " com adicional de 20%" :
+        "Você vai receber R$" + (semana * recebe * 1.30).toFixed(2) + " com adicional de 30%";
+
     //SAÍDA
-
+    alert(msgFinal);
 </script>

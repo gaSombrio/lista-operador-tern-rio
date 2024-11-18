@@ -20,7 +20,10 @@
     //PROCESSAMENTO
     let conta = agua + energia + telefone + supermercado;
     let msgFinal = "";
-    (salario > conta) ? msgFinal = "ganha o suficiente para pagar as contas <br> " :
+    (salario > conta) ? msgFinal = "ganha o suficiente para pagar as contas e resta R$" + (salario - conta) :
+    msgFinal = "não ganha o suficiente e falta R$" + (conta - salario) ;
     //SAÍDA
+
+    document.write(msgFinal)
     
 </script>
